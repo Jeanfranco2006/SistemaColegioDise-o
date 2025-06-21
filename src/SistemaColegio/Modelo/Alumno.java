@@ -1,35 +1,22 @@
 
 package SistemaColegio.Modelo;
 
-import java.util.Date;
-
-public class Alumno {
+public class Alumno extends Persona{
     private String idAlumno;
     private String apoderado;
-    private String nombres;
-    private String ApellidoP;
-    private String ApellidoM;
-    private String sexo;
-    private String telefono;
-    private String direccion;
-    private Date fechaNacimiento;
-    private char estado;
+    private String grado;
+    private String seccion;
 
     public Alumno() {
     }
     
-    public Alumno(String idAlumno, String apoderado, String nombres, String ApellidoP, String ApellidoM,
-                  String sexo, String telefono, String direccion, Date fechaNacimiento, char estado) {
+    public Alumno(String idAlumno, String apoderado, String grado, String seccion, int dni, String Nombres, String ApellidoP, String ApellidM, 
+            String FechaNacimiento, String Sexo, String direccion, int telefono, String email){
+    super(dni, Nombres, ApellidoP, ApellidM, FechaNacimiento, Sexo, direccion, telefono, email);
         this.idAlumno = idAlumno;
         this.apoderado = apoderado;
-        this.nombres = nombres;
-        this.ApellidoP = ApellidoP;
-        this.ApellidoM = ApellidoM;
-        this.sexo = sexo;
-        this.telefono = telefono;
-        this.direccion = direccion;
-        this.fechaNacimiento = fechaNacimiento;
-        this.estado = estado;
+        this.grado = grado;
+        this.seccion = seccion;
     }
     
     public void verHorario(){
@@ -52,70 +39,21 @@ public class Alumno {
         this.apoderado = apoderado;
     }
 
-    public String getNombres() {
-        return nombres;
+    public String getGrado() {
+        return grado;
     }
 
-    public void setNombres(String nombres) {
-        this.nombres = nombres;
+    public void setGrado(String grado) {
+        this.grado = grado;
     }
 
-    public String getApellidoP() {
-        return ApellidoP;
+    public String getSeccion() {
+        return seccion;
     }
 
-    public void setApellidoP(String ApellidoP) {
-        this.ApellidoP = ApellidoP;
+    public void setSeccion(String seccion) {
+        this.seccion = seccion;
     }
 
-    public String getApellidoM() {
-        return ApellidoM;
-    }
-
-    public void setApellidoM(String ApellidoM) {
-        this.ApellidoM = ApellidoM;
-    }
-
-  
-
-    public String getSexo() {
-        return sexo;
-    }
-
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
-    public Date getFechaNacimiento() {
-        return fechaNacimiento;
-    }
-
-    public void setFechaNacimiento(Date fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
-    }
-
-    public char getEstado() {
-        return estado;
-    }
-
-    public void setEstado(char estado) {
-        this.estado = estado;
-    }
     
 }
